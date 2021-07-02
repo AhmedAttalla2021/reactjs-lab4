@@ -26,18 +26,6 @@ export default class StudentAdd extends Component {
     this.props.location.addRef(newStd);
   };
 
-  //  fireInput = (e) => {
-  //     this.setState({
-  //       id: e.target.value,
-  //       /* name: e.target.value,
-  //       age: e.target.value,
-  //       courses: e.target.value,
-  //       trackName: e.target.value,
-  //       dateOfBirth: e.target.value,
-  //       address: e.target.value,*/
-  //     });
-  //   };
-
   render() {
     return (
       <>

@@ -1,15 +1,3 @@
-/*import React, { Component } from "react";
-
-export default class Edit extends Component {
-  state = {
-    id: "",
-    name: "",
-  };
-  render() {
-    return <div>ahmed</div>;
-  }
-}*/
-
 import React, { Component } from "react";
 
 export default class Edit extends Component {
@@ -34,7 +22,6 @@ export default class Edit extends Component {
       dateOfBirth: this.state.dateOfBirth,
       address: this.state.address,
     });
-    // this.props.history.push("/");
   };
   render() {
     console.log("Edit props objecy", this.props);

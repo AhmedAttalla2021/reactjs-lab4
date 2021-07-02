@@ -6,9 +6,6 @@ export default class StudentList extends Component {
     studentsList: this.props.students,
   };
   addStudent = (newStudent) => {
-    /*  let newStudentsArr = [...this.state.Students, newStudent];
-
-    this.setState({ Students: newStudentsArr });*/
     this.state.studentsList.push(newStudent);
     this.setState({ studentsList: this.state.studentsList });
   };
