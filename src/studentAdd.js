@@ -23,6 +23,7 @@ export default class StudentAdd extends Component {
       address: this.state.address,
     };
     this.props.history.push("/");
+
     this.props.location.addRef(newStd);
   };
 

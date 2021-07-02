@@ -6,6 +6,25 @@ export default class StudentList extends Component {
     studentsList: this.props.students,
   };
   addStudent = (newStudent) => {
+    console.log(this.state.studentsList);
+    // this.state.studentsList.forEach((element) => {
+    //   if (newStudent.id == element.id) {
+    //     alert("enter correct id");
+    //     return;
+    //   } else {
+    //     this.state.studentsList.push(newStudent);
+    //     this.setState({ studentsList: this.state.studentsList });
+    //     return;
+    //   }
+    // });
+    for (let i = 0; i < this.state.studentsList.length; i++) {
+      if (newStudent.id == this.state.studentsList[i].id) {
+        alert("Invalid ID");
+        return;
+      }
+    }
+    /*let stateCloneArr = [...this.state.studentsList];
+    stateCloneArr.findIndex((student) => student.id == newStudent.id); */
     this.state.studentsList.push(newStudent);
     this.setState({ studentsList: this.state.studentsList });
   };
@@ -85,7 +104,7 @@ export default class StudentList extends Component {
           to={{ pathname: "/addNewStud", addRef: this.addStudent }}
           className="btn btn-primary"
         >
-          go to Add comp
+          Add Student
         </Link>
       </>
     );
